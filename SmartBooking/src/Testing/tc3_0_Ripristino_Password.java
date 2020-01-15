@@ -96,7 +96,7 @@ public class tc3_0_Ripristino_Password {
 		PrintWriter out = new PrintWriter(output);
 	
 		
-		when(request.getParameter("email")).thenReturn("carminesorrentino50carminesorrentino50@studenti.unisa.it");
+		when(request.getParameter("email")).thenReturn("carminesorrentino50carminesorrentin@studenti.unisa.it");
 		when(response.getWriter()).thenReturn(out);
 		
 		

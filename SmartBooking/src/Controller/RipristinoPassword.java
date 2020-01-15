@@ -65,10 +65,14 @@ public class RipristinoPassword extends HttpServlet {
 		
 		
 
-		risposta = Check.checkStudenteMail(email);		
+		risposta = Check.checkStudenteMail(email);	
+		
+		System.out.println("Risposta: "+risposta);
 		
 		try {
+			System.out.println("try: ");
 			risposta2 = Check.checkMailDocente(email);
+			System.out.println("Risposta2: "+risposta2);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -81,7 +85,7 @@ public class RipristinoPassword extends HttpServlet {
 		}else if(risposta.equals("ok") || risposta2.equals("ok")){
 			
 			risposta = "ok";
-			
+			 
 		}else {
 			
 			risposta = "non corretto";

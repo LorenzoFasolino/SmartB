@@ -142,18 +142,32 @@ public class Check {
 			System.out.println("/////no//////");
 			System.out.println(email.length());
 		}
+		email.matches("\\w+([\\.-]?\\w+)*@unisa[.]{1}it")  &&
 	*/
-		if(email.matches("\\w+([\\.-]?\\w+)*@unisa[.]{1}it")  && email.length()>=20 &&  email.length()<=50) {	
-			System.out.println(email.length());
+		
+		System.out.println("entro:");
+		if( email.length()>=20 &&  email.length()<=50) {
+			
+			if(email.matches("\\w+([\\.-]?\\w+)*@unisa[.]{1}it")) {
+			
+			
+			System.out.println("EMAIL L:"+email.length());
 			if(gestioneUtenti.checkEmailDocente(email)) {
 				System.out.println("OKOKOKOKOK"+email);
 				return "ok";
 			}	
 			else{
-				return "gia esiste";
+				return "gia esiste"; 
 			}
-		}
-		else{ 
+			
+			}else{
+				return "non corretto";
+				
+			}
+			
+			
+		}else{ 
+			System.out.println("Elseeeee:");
 			return "non corretto";
 		} 
 	}
