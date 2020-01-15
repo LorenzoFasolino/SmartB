@@ -52,7 +52,7 @@ class LoginTest {
 		submit.click();
 	    dm.doDelete(d.getMatricola());
 
-	    assertEquals("http://localhost:8080/SmartBooking/jsp/index.jsp", driver.getCurrentUrl());
+	    assertEquals("http://localhost:8080/SmartBooking/jsp/InfoDocente.jsp?mat="+d.getMatricola(), driver.getCurrentUrl());
 	    driver.quit(); 
 
 	  }
@@ -77,8 +77,8 @@ class LoginTest {
 		WebElement submit = driver.findElement(By.id("loginButton"));
 		submit.click();
 
-	    assertNotEquals("http://localhost:8080/SmartBooking/jsp/index.jsp", driver.getCurrentUrl());
-	    assertEquals(baseUrl,driver.getCurrentUrl());
+	    assertEquals("http://localhost:8080/SmartBooking/jsp/Login.jsp?err=1", driver.getCurrentUrl());
+	   // assertEquals(baseUrl,driver.getCurrentUrl());
 	    driver.quit();
 	  }
 	 
