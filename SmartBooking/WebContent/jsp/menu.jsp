@@ -82,9 +82,9 @@
 		                <a class="nav-link" href="index.jsp">Home<span class="sr-only">(current)</span></a>
 		                </li>
                 		
-                		<li class="nav-item ">
+                		<!--  <li class="nav-item ">
 		                <a class="nav-link" href="InfoDocente.jsp?mat=<%=utente.getMatricola()%>">Profilo docente<span class="sr-only">(current)</span></a>
-		                </li>
+		                </li>-->
 		                 <li class="nav-item">
                         <a class="nav-link" href="ViewRicercaDocenti.jsp">Ricerca docente</a>
                         </li>
@@ -96,6 +96,9 @@
                         <a class="nav-link" >Visualizza richieste</a>
                         </li>-->
 		                
+		                <li class="nav-item">
+                        <a class="nav-link" href="FormEmail.jsp">Invio avviso</a>
+                        </li>
 		                
 		                <li class="nav-item">
                         <a class="nav-link" href="CambioPassword.jsp">Cambia password</a>
@@ -113,9 +116,9 @@
 		                <a class="nav-link" href="index.jsp">Home<span class="sr-only">(current)</span></a>
 		                </li>
                 		
-                		<li class="nav-item ">
+                	<!--  	<li class="nav-item ">
 		                <a class="nav-link" href="ProfiloStudente.jsp">Profilo studente<span class="sr-only">(current)</span></a>
-		                </li>
+		                </li>-->
 		                
 		                <li class="nav-item">
                         <a class="nav-link" href="ViewRicercaDocenti.jsp">Ricerca docente</a>
@@ -137,9 +140,9 @@
 		                <a class="nav-link" href="index.jsp">Home<span class="sr-only">(current)</span></a>
 		                </li>
                 	
-                		<li class="nav-item ">
+                		<!-- <li class="nav-item ">
 		                <a class="nav-link" href="ProfiloSegreteria.jsp">Profilo segreteria<span class="sr-only">(current)</span></a>
-		                </li>
+		                </li> -->
 		                
 		                <li class="nav-item">
                         <a class="nav-link" href="RegDocente.jsp">Registrazione docente</a>

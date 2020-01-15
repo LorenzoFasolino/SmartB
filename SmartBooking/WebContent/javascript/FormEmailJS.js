@@ -5,26 +5,24 @@
 
 
 
-$(document).ready(function(){
+
 	
-	$("#buttonInvia").click(function(){
+	function inviaEmail(){ 
 		
-		alert("sss");
-		
-		alert(checkCognome());
-		alert(checkMailMittente());
-		alert(checkMailDestinario());
-			if(checkNome()==1 && checkCognome()==1 && checkMailMittente()==0 && checkMailDestinatario()==0){
+		//alert(checkNome());
+		//alert(checkMailMittente());
+	//	alert(checkMailDestinario());
+		//	if(checkNome()==1 && checkCognome()==1 && checkMailMittente()==0 && checkMailDestinatario()==0){
 				//alert("Si può procedere alla registrazione");
 				$("#form").submit();
-			}	
-			else{
-				alert("Errore. non è possibile effettuare il submit");
-			}
+		//	}	
+		//	else{
+		//		alert("Errore. non è possibile effettuare il submit");
+		//	}
 			
-	});
+	}
 	
-});
+
 
 /*
 function inviaEmail(){ 

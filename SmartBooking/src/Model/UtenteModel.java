@@ -90,8 +90,8 @@ private static final String TABLE_NAME_SEG = "ACALE.Segreteria";
 			//connection = DriverManagerConnectionPool.createDBConnection();
 			connection = DriverManagerConnectionPool.getDbConnection();
 			preparedStatement = connection.prepareStatement(selectSQL);
-			//preparedStatement.setString(1, nuovaPassword);
-			//preparedStatement.setString(2,utente.getMatricola());
+			preparedStatement.setString(1, nuovaPassword);
+			preparedStatement.setString(2,utente.getMatricola());
 			
 			System.out.println(preparedStatement);
 

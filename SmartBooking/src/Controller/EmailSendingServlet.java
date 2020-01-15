@@ -70,6 +70,7 @@ public class EmailSendingServlet extends HttpServlet {
 		try {
 			gestioneMail.sendEmail(host, port, user, pass, emailMittente, emailDestinatario, nome, cognome, subject, content); //invio email di EmailUtility
 			resultMessage = "The e-mail was sent successfully"; //setta il messaggio di buona riuscita dell'invio
+			response.sendRedirect("./jsp/FormEmail.jsp");
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			resultMessage = "There were an error: " + ex.getMessage(); //altrimenti crea un messaggio di errore

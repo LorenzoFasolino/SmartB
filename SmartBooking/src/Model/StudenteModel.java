@@ -173,7 +173,7 @@ private static final String TABLE_NAME = "Studente";
 			ResultSet rs = preparedStatement.executeQuery();
 
 			while (rs.next()) {
-				bean.setMatricola("matricola");
+				bean.setMatricola(rs.getString("matricola"));
 				bean.setNome(rs.getString("nome"));
 				bean.setCognome(rs.getString("cognome"));
 				bean.setEmail(rs.getString("email"));

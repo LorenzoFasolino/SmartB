@@ -74,8 +74,11 @@ public class RipristinoPassword extends HttpServlet {
 			e.printStackTrace();
 		}		
 		
-		
-		if(risposta.equals("ok") || risposta2.equals("ok")){
+		if(risposta.equals("gia esiste") || risposta2.equals("gia esiste")){
+			
+			risposta = "";
+			
+		}else if(risposta.equals("ok") || risposta2.equals("ok")){
 			
 			risposta = "ok";
 			
@@ -84,6 +87,7 @@ public class RipristinoPassword extends HttpServlet {
 			risposta = "non corretto";
 			
 		}
+		
 		
 		
 
@@ -103,8 +107,8 @@ public class RipristinoPassword extends HttpServlet {
 		
 		//*******INVIO EMAIL********//
 		//Invio email con credenziali
-/*		String emailMittente="smartbookingplatform@gmail.com";
-		String emailDestinatario="fasolinolorenzo@gmail.com"; //email;
+		String emailMittente="smartbookingplatform@gmail.com";
+		String emailDestinatario= email; //email;
 		String subject="Benvenuto Su SmartBooking";
 		
 		//Creazione messaggio(content) da inviare 
@@ -125,7 +129,7 @@ public class RipristinoPassword extends HttpServlet {
 			//**Cosa fare dopo aver fatto il sendMail***
 		} 
 	
-*/		
+		
 		
 		risposta = "email inviato";
 		writer.write(risposta);
