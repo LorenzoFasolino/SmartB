@@ -34,9 +34,9 @@ import gestioneUtenti.GestioneUtentiConcrete;
 
 class ListaPreferitiModelWBTesting {
 	
-	static Docente doc = new Docente("Alfredo", "Raimondo", "0512105214", "12345678", "a.raimondo52@unisa.it", "uff01");
+	static Docente doc = new Docente("Alfredo", "Raimondo", "0512105334", "12345678", "a.raimondo52@unisa.it", "uff01");
 	
-	static Studente s = new Studente("Alfredo", "Raimondo", "0512105215", "12345678", "a.raimondo12@studenti.unisa.it");
+	static Studente s = new Studente("Alfredo", "Raimondo", "0512995215", "12345678", "a.raimondo12@studenti.unisa.it");
 	
 	static ListaPreferitiModel lm = new ListaPreferitiModel();
 	

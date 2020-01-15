@@ -25,15 +25,15 @@ class StudenteModel_WB {
 	  void testDoSaveDoDelete() throws Exception {
 	    StudenteModel sm = new StudenteModel();
 	    
-	    Studente studente = new Studente("Alfredo", "Raimondo", "0512105215", "12345678", "a.raimondo12@unisa.it");
+	    Studente studente = new Studente("Alfredo", "Raimondo", "0112105211", "12345678", "a.raimondo12@unisa.it");
 	    
 	    sm.doSave(studente);
 	    
-	    sm.doDelete(studente.getMatricola());
+	   
 	    
-	 //   assertEquals(sm.doRetrieveByKey(studente.getMatricola()),studente);
+	    assertEquals(sm.doRetrieveByKey(studente.getMatricola()).getMatricola(),"0112105211");
 
-	  //  sm.doDelete(studente.getMatricola());
+	   sm.doDelete(studente.getMatricola());
 	    
 	  }
 	
@@ -45,7 +45,7 @@ class StudenteModel_WB {
 
 	    StudenteModel sm = new StudenteModel();
 	    
-	    Studente studente = new Studente("Alfredo", "Raimondo", "0512105215", "12345678", "a.raimondo12@unisa.it");
+	    Studente studente = new Studente("Alfredo", "Raimondo", "0512133212", "12345678", "a.lraimondo12@unisa.it");
 	    sm.doSave(studente);
 	    sm.doDeleteByEmail(studente.getEmail());
 	    
@@ -58,7 +58,7 @@ class StudenteModel_WB {
 	  void testExistMail() throws Exception {
 		StudenteModel sm = new StudenteModel();
 	    
-	    Studente studente = new Studente("Alfredo", "Raimondo", "0512105215", "12345678", "a.raimondo12@unisa.it");
+	    Studente studente = new Studente("Alfredo", "Raimondo", "0512109215", "12345678", "a.raimondo12@unisa.it");
 	    
 	    sm.doSave(studente);
 	    
@@ -84,7 +84,7 @@ class StudenteModel_WB {
 	  void testExistMatricola() throws Exception {
 		StudenteModel sm = new StudenteModel();
 	    
-	    Studente studente = new Studente("Alfredo", "Raimondo", "0512105215", "12345678", "a.raimondo12@unisa.it");
+	    Studente studente = new Studente("Alfredo", "Raimondo", "0512705115", "12345678", "a.raimondo12@unisa.it");
 	    
 	    sm.doSave(studente);
 	    
@@ -131,15 +131,16 @@ class StudenteModel_WB {
 	 @Test
 	  void testDoRetrieveByKey() throws Exception {
 	    StudenteModel sm = new StudenteModel();
-	    Studente studente = new Studente("Alfredo", "Raimondo", "0512105215", "12345678", "a.raimondo12@unisa.it");
+	    Studente studente = new Studente("Alfredo", "Raimondo", "0512985999", "12345678", "a.raimondo12@unisa.it");
 	    sm.doSave(studente);
 	    		
 	    Studente st = sm.doRetrieveByKey(studente.getMatricola());
 	    
-	    sm.doDelete(studente.getMatricola());
+	 
 
 	
-	 //   assertEquals(studente.getMatricola(), st.getMatricola());
+	    assertEquals(studente.getMatricola(), st.getMatricola());
+	    sm.doDelete(studente.getMatricola());
 	    
 	  }
 	  
