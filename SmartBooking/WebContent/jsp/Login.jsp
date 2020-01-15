@@ -54,6 +54,14 @@
     			
     				<button type="submit" id="loginButton" class="btn btn-login float-right">Submit</button>
     				
+    				<%if(request.getParameter("err") != null){ 
+    				
+    					if(request.getParameter("err").equals("1")){%>
+    				
+    					<h7 style="color:red">Credenziali errate</h7>
+    				
+    				<%}} %>
+    				
     				<a href="RipristinoPassword.jsp">Ripristino password</a>
   				
   		

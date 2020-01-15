@@ -64,7 +64,7 @@ public class LoginServlet extends HttpServlet {
 
 
 			out.write("Errore");
-			response.sendRedirect("./jsp/Login.jsp");  //se le credenziali sono sbagliate l'utente viene riportato sulla pagina di login
+			response.sendRedirect("./jsp/Login.jsp?err=1");  //se le credenziali sono sbagliate l'utente viene riportato sulla pagina di login
 		}
 		else {
 		
