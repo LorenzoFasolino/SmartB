@@ -32,7 +32,7 @@ public class RegistrazioneStudenteServlet extends HttpServlet {
 	private GestioneUtenti gestioneUtenti = new GestioneUtentiConcrete();
 	private static GestioneMail gestioneMail = new GestioneMailConcrete();
 	
-	
+	 
        
     /**
      * @see HttpServlet#HttpServlet()
