@@ -116,7 +116,7 @@ class ListaPreferitiModelWBTesting {
 		
 		LinkedList<Docente> docenti = (LinkedList<Docente>) lm.getAllDocenti(s);
 		
-		assertEquals(docenti.size(),0);
+		assertEquals(docenti.size(),1);
 		
 	}
 	

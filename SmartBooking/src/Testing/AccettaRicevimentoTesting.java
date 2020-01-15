@@ -19,7 +19,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -32,27 +34,27 @@ import gestioneUtenti.GestioneUtentiConcrete;
 
 class AccettaRicevimentoTesting {
 	
-AccettaRicevimentoServlet myServlet;
+	static AccettaRicevimentoServlet myServlet;
 
-StudenteModel sm= new StudenteModel();
-DocenteModel dm= new DocenteModel();
-RicevimentoModel rm= new	RicevimentoModel();
+static StudenteModel sm= new StudenteModel();
+static DocenteModel dm= new DocenteModel();
+static RicevimentoModel rm= new	RicevimentoModel();
 
 	@Mock
-	HttpServletRequest request;
+	static HttpServletRequest request;
 	
 	@Mock
-	HttpServletResponse response;
+	static HttpServletResponse response;
 	
 	@Mock
-	HttpSession session;
+	static HttpSession session;
 	
 	@Mock
-	ServletContext context;
+	static ServletContext context;
 
-   Docente docente;
-	@BeforeEach 
-	public void beforeEachTestCase() throws SQLException{
+	static Docente docente;
+	@BeforeAll
+	static public void beforeEachTestCase() throws SQLException{
 		request = mock(HttpServletRequest.class);
 		response = mock(HttpServletResponse.class);
 		session = mock(HttpSession.class);
@@ -73,15 +75,18 @@ RicevimentoModel rm= new	RicevimentoModel();
 		rm.doSave(r, c);
 	}
 	
-	@AfterEach
-	 public void afterEachTestCase() throws SQLException {
+	@AfterAll
+	static  public void afterEachTestCase() throws SQLException {
 		
 		
 		
 		dm.doDelete("0512105470");
 		sm.doDelete("0512105477");
-		//Ricevimento r= (Ricevimento) rm.doRetrieveAllByDoc("0512105470");
-		//rm.doDelete(r.getId());
+		Collection<Ricevimento> r=  rm.doRetrieveAllByDoc("0512105470");
+		LinkedList<Ricevimento> l=(LinkedList<Ricevimento>)r;
+		
+		if(l.size()>0)
+		rm.doDelete(l.get(0).getId());
 		
 		
 		
